@@ -1,0 +1,40 @@
+{
+    "name": "spenserhale/wp-vip-dashboard-fuse",
+    "description": "Integrates WordPress VIP Dashboard Features into WordPress Application",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "SH\\WVDF\\": "src/",
+            "SH\\WVDF\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "env:start": "wp-env start",
+        "env:stop": "wp-env stop",
+        "test": "wp-env run tests-cli --env-cwd=wp-content/plugins/wp-vip-dashboard-fuse vendor/bin/phpunit"
+    },
+    "authors": [
+        {
+            "name": "Spenser Hale",
+            "email": "opensource@spenserhale.dev"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "8.2"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/extension-installer": "^1.3",
+        "szepeviktor/phpstan-wordpress": "^1.3",
+        "wp-phpunit/wp-phpunit": "^6.3",
+        "yoast/phpunit-polyfills": "^2.0"
+    }
+}

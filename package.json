@@ -1,0 +1,32 @@
+{
+  "name": "wp-vip-dashboard-fuse",
+  "description": "Integrates WordPress VIP Dashboard Features into WordPress Application",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "webpack -w --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "author": {
+    "name": "Spenser Hale",
+    "email": "opensource@spenserhale.dev",
+    "url": "https://github.com/spenserhale"
+  },
+  "dependencies": {
+    "@spenserhale/gutenberg-blocks-components": "github:spenserhale/gutenberg-blocks-components#017e5b7467a09c5e40cc05048409dea687ff12d3",
+    "@wordpress/api-fetch": "^6.55.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@types/wordpress__components": "^23.0.11",
+    "@wordpress/components": "^23.0.0",
+    "@wordpress/element": "^4.14.0",
+    "@wordpress/i18n": "^4.18.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
+  }
+}
